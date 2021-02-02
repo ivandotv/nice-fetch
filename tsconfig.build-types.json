@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.check-types.json",
+  "compilerOptions": {
+    "emitDeclarationOnly": true,
+    "declarationMap": true,
+    "declaration": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "outDir": "./dist/types"
+  },
+  "exclude": [
+    "**/node_modules",
+    "src/**/__tests__",
+    "src/**/*.test.ts",
+    "src/**/*.spec.ts"
+  ]
+}
