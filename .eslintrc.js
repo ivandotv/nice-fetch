@@ -60,6 +60,7 @@ module.exports = {
       }
     ],
     '@typescript-eslint/no-non-null-assertion': [2],
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/member-delimiter-style': [
       'error',
       {
