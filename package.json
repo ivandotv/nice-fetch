@@ -1,5 +1,5 @@
 {
-  "name": "ffetch",
+  "name": "@ivandotv/fetch",
   "version": "1.0.0",
   "author": "Ivan Vlatkovic",
   "description": "Wrapper function to simplify working with native fetch",
@@ -32,7 +32,7 @@
     "server:build": "yarn type:build && yarn server:build:cjs && yarn server:build:esm",
     "server:watch": "del dist/cjs && cross-env BABEL_ENV=cjsWatch NODE_ENV=development babel src --out-dir dist/cjs --extensions .ts,.tsx,.js,.jsx --source-maps --watch",
     "build": "yarn type:check && yarn test && node scripts/build.js",
-    "publish": "yarn build && yarn semantic-release"
+    "release": "yarn build && yarn semantic-release"
   },
   "engines": {
     "node": ">=10.0.0"
