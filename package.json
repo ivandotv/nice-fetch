@@ -1,13 +1,12 @@
 {
   "name": "ffetch",
   "version": "1.0.0",
-  "private": true,
   "author": "Ivan Vlatkovic",
-  "description": "",
+  "description": "Wrapper function to simplify working with native fetch",
+  "license": "MIT",
   "buildTarget": "server",
   "main": "dist/cjs/index.js",
   "module": "dist/unpkg/ffetch.esm.js",
-  "sideEffects": false,
   "types": "dist/types/",
   "files": [
     "dist",
