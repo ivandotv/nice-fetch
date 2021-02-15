@@ -18,7 +18,11 @@ export default function ffetch<
     return fetch(reqInfo, reqInit)
       .then((res) => {
         if (res.ok) {
-          res[content]().then(resolve).catch(reject)
+          res[content]()
+            .then((data) => {
+              resolve([data, res])
+            })
+            .catch(reject)
         } else {
           reject(res)
         }
