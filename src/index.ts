@@ -6,7 +6,7 @@ type KeyToBodyResponse = {
   json: any
 }
 
-export default function ffetch<
+export default function niceFetch<
   TExpectedData extends keyof KeyToBodyResponse = keyof KeyToBodyResponse
 >(
   reqInfo: RequestInfo,

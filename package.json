@@ -1,12 +1,12 @@
 {
-  "name": "@ivandotv/fetch",
+  "name": "nice-fetch",
   "version": "1.0.0",
   "author": "Ivan Vlatkovic",
   "description": "Wrapper function to simplify working with native fetch",
   "license": "MIT",
   "buildTarget": "server",
   "main": "dist/cjs/index.js",
-  "module": "dist/unpkg/ffetch.esm.js",
+  "module": "dist/esm/index.js",
   "types": "dist/types/",
   "files": [
     "dist",
@@ -48,12 +48,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ivandotv/ffetch.git"
+    "url": "git+https://github.com/ivandotv/nice-fetch.git"
   },
   "bugs": {
-    "url": "https://github.com/ivandotv/ffetch/issues"
+    "url": "https://github.com/ivandotv/nice-fetch/issues"
   },
-  "homepage": "https://github.com/ivandotv/ffetch#readme",
+  "homepage": "https://github.com/ivandotv/nice-fetch#readme",
   "keywords": [],
   "dependencies": {},
   "devDependencies": {

@@ -1,4 +1,4 @@
-import ffetch from '../src/index'
+import niceFetch from '../src/index'
 
 describe('Proper response objects are returned', () => {
   let withMockResponse: (mockResponse: any) => jest.Mock
@@ -26,7 +26,7 @@ describe('Proper response objects are returned', () => {
     const mockFetch = withMockResponse(mockResponse)
     global.fetch = mockFetch
 
-    await ffetch(mockRequestInfo, mockRequestInit)
+    await niceFetch(mockRequestInfo, mockRequestInit)
 
     expect(mockFetch.mock.calls[0][0]).toBe(mockRequestInfo)
     expect(mockFetch.mock.calls[0][1]).toBe(mockRequestInit)
@@ -40,7 +40,7 @@ describe('Proper response objects are returned', () => {
 
     global.fetch = withMockResponse(mockResponse)
 
-    const [data, response] = await ffetch(mockRequestInfo, mockRequestInit)
+    const [data, response] = await niceFetch(mockRequestInfo, mockRequestInit)
 
     expect(data).toBe(mockData)
     expect(response).toBe(mockResponse)
@@ -55,7 +55,7 @@ describe('Proper response objects are returned', () => {
 
       global.fetch = withMockResponse(mockResponse)
 
-      await ffetch(mockRequestInfo, mockRequestInit)
+      await niceFetch(mockRequestInfo, mockRequestInit)
 
       expect(jsonMock).toBeCalled()
     })
@@ -67,7 +67,7 @@ describe('Proper response objects are returned', () => {
       }
 
       global.fetch = withMockResponse(mockResponse)
-      await ffetch(mockRequestInfo, mockRequestInit, 'json')
+      await niceFetch(mockRequestInfo, mockRequestInit, 'json')
 
       expect(jsonMock).toBeCalled()
     })
@@ -81,7 +81,7 @@ describe('Proper response objects are returned', () => {
 
       global.fetch = withMockResponse(mockResponse)
 
-      await ffetch(mockRequestInfo, mockRequestInit, 'blob')
+      await niceFetch(mockRequestInfo, mockRequestInit, 'blob')
 
       expect(blobMock).toBeCalled()
     })
@@ -94,7 +94,7 @@ describe('Proper response objects are returned', () => {
 
       global.fetch = withMockResponse(mockResponse)
 
-      await ffetch(mockRequestInfo, mockRequestInit, 'formData')
+      await niceFetch(mockRequestInfo, mockRequestInit, 'formData')
 
       expect(formDataMock).toBeCalled()
     })
@@ -107,7 +107,7 @@ describe('Proper response objects are returned', () => {
 
       global.fetch = withMockResponse(mockResponse)
 
-      await ffetch(mockRequestInfo, mockRequestInit, 'text')
+      await niceFetch(mockRequestInfo, mockRequestInit, 'text')
 
       expect(textDataMock).toBeCalled()
     })
@@ -120,7 +120,7 @@ describe('Proper response objects are returned', () => {
 
       global.fetch = withMockResponse(mockResponse)
 
-      await ffetch(mockRequestInfo, mockRequestInit, 'arrayBuffer')
+      await niceFetch(mockRequestInfo, mockRequestInit, 'arrayBuffer')
 
       expect(arrayBufferMock).toBeCalled()
     })
@@ -136,7 +136,7 @@ describe('Proper response objects are returned', () => {
 
       expect.assertions(1)
       try {
-        await ffetch(mockRequestInfo, mockRequestInit)
+        await niceFetch(mockRequestInfo, mockRequestInit)
       } catch (e) {
         expect(e).toBe(mockResponse)
       }
@@ -153,7 +153,7 @@ describe('Proper response objects are returned', () => {
 
       expect.assertions(1)
       try {
-        await ffetch(mockRequestInfo, mockRequestInit)
+        await niceFetch(mockRequestInfo, mockRequestInit)
       } catch (e) {
         expect(e).toBe(parseError)
       }
@@ -168,7 +168,7 @@ describe('Proper response objects are returned', () => {
 
       expect.assertions(1)
       try {
-        await ffetch(mockRequestInfo, mockRequestInit)
+        await niceFetch(mockRequestInfo, mockRequestInit)
       } catch (e) {
         expect(e).toBe(mockFetchError)
       }

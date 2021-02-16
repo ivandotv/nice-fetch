@@ -1,14 +1,14 @@
-# Simple wrapper for fetch function
+# Nice Fetch
 
-![CI status](https://github.com/ivandotv/ffetch/workflows/.github/workflows/CI.yml/badge.svg)
-![Codecov](https://img.shields.io/codecov/c/github/ivandotv/ffetch)
-![NPM](https://img.shields.io/npm/l/radio-browser-api)
+[![CI status](https://github.com/ivandotv/nice-fetch/workflows/Unit%20tests/badge.svg)](https://github.com/ivandotv/nice-fetch/actions?query=workflow%3A%22Unit+tests%22)
+[![Codecov](https://img.shields.io/codecov/c/github/ivandotv/nice-fetch)](https://codecov.io/gh/ivandotv/nice-fetch)
+[![NPM](https://img.shields.io/npm/l/nice-fetch)](https://www.npmjs.com/package/nice-fetch)
 [![semantic release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 
 Installation:
 
 ```sh
-npm install @ivandotv/fetch
+npm install nice-fetch
 ```
 
 ## Table of Contents
@@ -41,7 +41,7 @@ try {
 I can do this:
 
 ```js
-import fetch from '@ivandotv/fetch'
+import fetch from 'nice-fetch'
 
 try {
   const [data, response] = await fetch('https://example.com')
@@ -54,7 +54,7 @@ A small improvement I know, but it adds up over time :)
 
 ## Usage
 
-`@ivandotv/fetch` accepts the same arguments as regular [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) with one additional argument which is the `type` of the body from the response that you expect to be returned, the default value is `json`. This determines how the response body content should be handled.
+`nice-fetch` accepts the same arguments as regular [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) with one additional argument which is the `type` of the body from the response that you expect to be returned, the default value is `json`. This determines how the response body content should be handled.
 
 ```js
 // if (response.ok)
@@ -67,6 +67,8 @@ Other parameters are all available methods on the [Body mixin](https://developer
 for example:
 
 ```js
+import fetch from 'nice-fetch'
+
 // data is JSON (default)
 const [data, response] = await fetch('https://example.com')
 

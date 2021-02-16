@@ -1,11 +1,6 @@
-name: Unit tests
+name: Manual Publish
 on:
-  push:
-    branches:
-      - master
-  pull_request:
-    branches:
-      - master
+  workflow_dispatch:
 jobs:
   build:
     name: Node ${{ matrix.node }} unit tests
@@ -22,7 +17,7 @@ jobs:
         run: echo "::set-output name=dir::$(yarn cache dir)"
 
       - name: Cache node modules
-      - uses: actions/cache@v2
+        uses: actions/cache@v2
         id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
         with:
           path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
@@ -47,7 +42,7 @@ jobs:
           file: ./coverage/coverage-final.json
 
       - name: 'Publish to NPM'
-        if: github.event_name == 'push' && github.repository == 'ivandotv/ffetch' && matrix.node == 14
+        if: github.event_name == 'push' && github.repository == 'ivandotv/nice-fetch' && matrix.node == 14
         run: yarn publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

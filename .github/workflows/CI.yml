@@ -44,7 +44,7 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
           file: ./coverage/coverage-final.json
       - name: 'Publish to NPM'
-        if: github.event_name == 'push' && github.repository == 'ivandotv/ffetch' && matrix.node == 14
+        if: github.event_name == 'push' && github.repository == 'ivandotv/nice-fetch' && matrix.node == 14
         run: yarn release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
