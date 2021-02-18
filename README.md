@@ -19,7 +19,7 @@ npm install nice-fetch
 
 ## What is it
 
-A very simple function (330 bytes gzipped ) that simplifies working with the [fetch].(https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
+A very simple function (330 bytes gzipped ) that simplifies working with the [fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 
 ## Motivation
 
@@ -114,4 +114,4 @@ In case that the `response.ok` is not true (status is **not** in the range 200â€
 
 In case that the response body content can't be properly handled e.g. invalid JSON, the function will rethrow the error.
 
-In case there is an error from the `fetch` call itself ( Network request failed, timeout) functions will also rethrow that error.
+In case there is an error from the `fetch` call itself ( Network request failed, timeout) function will also rethrow that error.
