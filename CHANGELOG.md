@@ -1,3 +1,8 @@
+### [1.0.2](https://github.com/ivandotv/nice-fetch/compare/v1.0.1...v1.0.2) (2021-02-18)
+
+
+* **readme:** grammar and link fix ([87579c1](https://github.com/ivandotv/nice-fetch/commit/87579c1d0ececa9ceda2ae9a624b28c41f1f794a))
+
 ## 1.0.0 (2021-02-18)
 
 
