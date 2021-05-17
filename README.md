@@ -48,6 +48,11 @@ try {
 } catch (e) {
   console.log(e)
 }
+// or this
+
+const [data, response] = await fetch('https://example.com').catch((e) =>
+  console.log(e)
+)
 ```
 
 A small improvement I know, but it adds up over time :)
