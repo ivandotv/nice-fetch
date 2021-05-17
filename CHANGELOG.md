@@ -1,3 +1,8 @@
+### [1.0.4](https://github.com/ivandotv/nice-fetch/compare/v1.0.3...v1.0.4) (2021-05-17)
+
+
+* **readme:** add 'catch' example ([05c383d](https://github.com/ivandotv/nice-fetch/commit/05c383d97daab00bc4e97883ada885067b403a56))
+
 ### [1.0.2](https://github.com/ivandotv/nice-fetch/compare/v1.0.1...v1.0.2) (2021-02-18)
 
 

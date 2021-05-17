@@ -1,6 +1,6 @@
 {
   "name": "nice-fetch",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "author": "Ivan Vlatkovic",
   "description": "Wrapper function to simplify working with native fetch",
   "license": "MIT",
