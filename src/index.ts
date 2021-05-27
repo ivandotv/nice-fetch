@@ -6,13 +6,20 @@ type KeyToBodyResponse = {
   json: any
 }
 
-export default function niceFetch<
-  TExpectedData extends keyof KeyToBodyResponse = keyof KeyToBodyResponse
->(
+export type Content = keyof KeyToBodyResponse
+
+export function fetchJson<T = any>(
+  reqInfo: RequestInfo,
+  reqInit?: RequestInit
+): Promise<[T, Response]> {
+  return niceFetch(reqInfo, reqInit, 'json') as Promise<[T, Response]>
+}
+
+export default function niceFetch<T extends Content = Content>(
   reqInfo: RequestInfo,
   reqInit?: RequestInit,
   // @ts-expect-error - suppress "different subtype constraint" error  because we can't have default value for a generic type
-  content: TExpectedData = 'json'
+  content: T = 'json'
 ): Promise<[KeyToBodyResponse[typeof content], Response]> {
   return new Promise((resolve, reject) => {
     return fetch(reqInfo, reqInit)

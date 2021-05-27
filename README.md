@@ -55,6 +55,23 @@ const [data, response] = await fetch('https://example.com').catch((e) =>
 )
 ```
 
+Or if exclusively working with JSON
+
+```js
+import { fetchJson } from 'nice-fetch'
+
+try {
+  const [data, response] =
+    (await fetchJson) <
+    { name: string, address: string } >
+    'https://example.com'
+
+  console.log(data.name) // correctly typed
+} catch (e) {
+  console.log(e)
+}
+```
+
 A small improvement I know, but it adds up over time :)
 
 ## Usage
